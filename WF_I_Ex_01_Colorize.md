@@ -16,7 +16,7 @@ Make sure you get acquainted with the above software, with priority for Visual S
 
 - Prepare a folder on your disk where you will place all assignments
 - Make a subfolder `my-first-react-app`
-- Either run `npm init react-app my-first-react-app` or `npx create-react-app my-first-react-app` or copy the content of this [archive](React_Template/hello-world-node.zip) into your sub-folder (=faster).
+- Either run `npm init react-app my-first-react-app` or `npx create-react-app my-first-react-app` or copy the content of this [archive](./React_Template/hello-world-node.zip) into your sub-folder (=faster).
 - Start the application with `npm start`
 
 > Tip: You may have noticed it takes a while to start a new app. If you do not like to wait, or you want to be more electron-friendly, then keep a archived version of this ready-made app somewhere so you can re-use anytime you like.
