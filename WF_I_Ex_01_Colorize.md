@@ -16,14 +16,16 @@ Make sure you get acquainted with the above software, with priority for Visual S
 
 - Prepare a folder on your disk where you will place all assignments
 - Make a subfolder `my-first-react-app`
-- Either run `npm init react-app my-first-react-app` or `npx create-react-app my-first-react-app` or copy the content of this [archive](./React_Template/hello-world-node.zip) into your sub-folder (=faster).
+- Either run `npm init react-app my-first-react-app` or `npx create-react-app my-first-react-app` or copy the content of this [archive](./React_Template/hello-world-node.zip) into your sub-folder (=faster). This will create a ready-made application conveniently called the `create-react-app` or **CRA**.
 - Start the application with `npm start`
+
+> See the [create-react-app](https://create-react-app.dev/) website for more info
 
 > Tip: You may have noticed it takes a while to start a new app. If you do not like to wait, or you want to be more electron-friendly, then keep a archived version of this ready-made app somewhere so you can re-use anytime you like.
 
 If all goes well, you should see something like this:
 
-![Built-in template React app built by npm init](Media/Getting_Started.png)
+![create-react-app built by npm init](Media/Getting_Started.png)
 
 Now, install the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=nl) and read a bit about it. We will later discover its use. For now, look at the Components tab in your dev tools and you should see something like this:
 
@@ -38,7 +40,7 @@ As a first exercise, we will make a mini application that resembles this mockup 
 #### Given
 
 - A successful installation of the above software
-- A base react app (so-called `create-react-app`)
+- A CRA
 - This [color picker](https://casesandberg.github.io/react-color/)
 
 #### Assignment

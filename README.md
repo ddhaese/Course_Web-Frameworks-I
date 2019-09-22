@@ -8,4 +8,4 @@
 
 ## Exercises
 
-- [Ex 01: Colorize the React logo](WF_I_Ex_01_Colorize.md)
+- [Ex 01: Colorize the React logo](WF_I_Ex_01_Colorize.md) ([solution](WF_I_Ex_01_Colorize_Solution.md))
