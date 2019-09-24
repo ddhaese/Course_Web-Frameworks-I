@@ -220,9 +220,7 @@ The second parameter is `this.props.greeting` and for us to understand this we, 
 class Greeter extends React.Component {
   state = { color: "red" };
   render() {
-    return <h1 style={this.state}>
-      {this.props.greeting}
-    </h1>;
+    return <h1 style={this.state}>{this.props.greeting}</h1>;
   }
 }
 
@@ -240,7 +238,7 @@ DOM
          └——— h1
 ```
 
-Mind that the hierarchy is a mix of virtual and true elements. `Greeter` is a virtual element and `h1` of course is a true HTML element. The syntax for a virtual element is similar to a true HTML element:
+Mind that a hierarchy can be a mix of React Component and HTML elements. `Greeter` is a Component and `h1` of course is an HTML element. The lowest level of the hierarchy must always be pure HTML. The syntax for a React Component tag is similar to that of a true HTML tag:
 
 ```jsx
 return <div>
@@ -254,4 +252,8 @@ The DOM here also stands for Document Object Model but represents a virtual repr
 
 ### Props
 
-Note that an attribute is being passed on from the main component to its only child: `greeting="Hello World!"`. Such an attribute is called a **prop** (short for property, could be quite confusion...). This prop is indeed the one being consumed by the child (`this.props.greeting`). Notice that all properties being received from a parent are being placed in the `this.props` class property by the React framework.
+Note that an attribute is being passed on from the main component to its only child: `greeting="Hello World!"`. Such an attribute is called a **prop** (short for property, could be quite confusion&hellip;). This prop is indeed the one being consumed by the child (`this.props.greeting`). Notice that all props being received from a parent are being placed in the `this.props` class property by the React framework. Let us visualize this:
+
+![Visual representation of ins and outs of Greeter Component](Media/Greeter_Visual.png)
+
+The diagram depicts the `greeting` prop as an input of the `Greeter` component, just as an attribute on a HTML element can be seen as an input or parametrization for drawing that HTML element.
