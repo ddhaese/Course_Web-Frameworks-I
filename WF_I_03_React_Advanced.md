@@ -4,4 +4,6 @@
 
 ### Virtual DOM
 
-[Video](Media/Clock_In_Action.mp4)
+<video controls="controls" autoplay>
+  <source type="video/mp4" src="Media/Clock_In_Action.mp4"></source>
+</video>
