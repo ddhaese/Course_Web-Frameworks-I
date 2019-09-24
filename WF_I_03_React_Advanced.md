@@ -4,4 +4,4 @@
 
 ### Virtual DOM
 
-[Video](Media\Clock_In_Action.mp4)
+[Video](Media/Clock_In_Action.mp4)
