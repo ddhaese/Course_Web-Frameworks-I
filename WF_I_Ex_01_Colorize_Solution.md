@@ -1,6 +1,6 @@
 # WebFrameworks Part I (26543/1700/1920/1/00)
 
-## Exercises on Fundamentals Web Technology
+## Exercises on React Basics (I)
 
 ### Installation
 
