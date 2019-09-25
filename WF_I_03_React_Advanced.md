@@ -2,6 +2,8 @@
 
 ## React Advanced
 
+![React by Bart Simpson](https://s3.amazonaws.com/media-p.slid.es/uploads/danabramov/images/663672/bart-simpson-generator.php.gif)
+
 ### Virtual DOM
 
 The Virtual DOM is, as mentioned before, a sort of 'mental' map of the actual DOM and React is responsible for only updating those elements that require updating. We can demonstrate this with a simple app that displays the clock (see [Ex_03](WF_I_Ex_03_Clock.md)):
