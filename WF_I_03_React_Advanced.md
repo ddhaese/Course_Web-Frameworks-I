@@ -14,7 +14,7 @@ Notice in the image above, that only the span element gets updated (indicated in
 
 We have already discussed the most important life cycle method, namely `render()` (also the only one that is compulsory), but there are others:
 
-![Component life cycle](Media\Life_Cycle.png)
+![Component life cycle](Media/Life_Cycle.png)
 
 Each of the above methods can be overridden. The most popular is the `componentDidMount` method. As the name suggests, it is being called when the component is fully rendered (see [Ex_03](WF_I_Ex_03_Clock.md)). You can use [this interactive diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) as a reference for the other methods.
 
