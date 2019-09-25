@@ -43,9 +43,9 @@ PASTE CONTENT OF App.js HERE
 ```
 
 ```js (CityList.js)
-PASTE CONTENT OF Logo.js HERE
+PASTE CONTENT OF CityList.js HERE
 ```
 
 ```js (Locator.js)
-PASTE CONTENT OF Logo.js HERE
+PASTE CONTENT OF Locator.js HERE
 ```
