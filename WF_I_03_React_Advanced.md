@@ -206,7 +206,7 @@ Hence the use of a **dispatcher**:
 ![A dispatcher](https://i.pinimg.com/originals/28/a3/40/28a3401ac81abe5cb6a115a35be907ef.jpg)
 
 ```jsx - App.js
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "./cnt/GlobalContext";
 import { Actions } from "../utl/bus";
 import { Translate } from "../utl/trn";
@@ -219,11 +219,13 @@ export const App = () => {
 
 	const { Global, Global_Dispatch } = useContext(GlobalContext);
 
-	return <div>
-			   <span>{Translate("Welcome", Global.Language)}</span>
-			   <button onClick={On_Lang_Toggle}>{Global.Language)}</button>
-		   </div>;
-}
+	return (
+		<div>
+			<span>{Translate("Welcome", Global.Language)}</span>
+			<button onClick={On_Lang_Toggle}>{Global.Language}</button>
+		</div>
+	);
+};
 ```
 
 Upon clicking the button, the `On_Lang_Toggle` method gets executed. Herein, the event propagation is being halted and the method to set the context (`Global_Dispatch`) is being called with as argument an object (`{ Type: Actions.Toggle_Language }`). This object is telling the dispatcher what the requested action is. In this case, the action is a string, kept inside a enumerator in a separate file for convenience:
@@ -264,7 +266,7 @@ export const GlobalContexProvider = ({ children }) => {
 };
 ```
 
-Instead of `useReducer`, we could have use the `useContext` hook. In that case the functionality is similar to that of `useState`. As mentioned above, the advantage of using `useReducer` is the separation of the application logic from the component rendering a bit more. Let us create out reducer step-by-step:
+As mentioned above, the advantage of using `useReducer` is the separation of the application logic from the component rendering a bit more. Let us create out reducer step-by-step:
 
 ```jsx - GlobalReducer.js
 export const GlobalReducer = (state, action) => {
@@ -296,7 +298,7 @@ export const GlobalReducer = (state, action) => {
 			return {
 				...state,
 				...{ Language: New_Language }
-			});
+			};
 	}
 }
 ```
