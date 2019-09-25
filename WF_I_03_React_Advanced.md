@@ -6,7 +6,7 @@
 
 The Virtual DOM is, as mentioned before, a sort of 'mental' map of the actual DOM and React is responsible for only updating those elements that require updating. We can demonstrate this with a simple app that displays the clock (see [Ex_03](WF_I_Ex_03_Clock.md)):
 
-![Clock only updates span](Media\Clock_Update.png)
+![Clock only updates span](Media/Clock_Update.png)
 
 Notice in the image above, that only the span element gets updated (indicated in purple in Chrome's Dev Tools), not the rest of the HTML. Deciding which screen element to update from the Virtual DOM is a very important function of the React framework. The idea is to let React do its job and be very explicit in telling it when you want to change something.
 
@@ -46,7 +46,7 @@ export const NameForm = () => {
 
 Observe how, in the above form, `Data` is being read from the state (which for functional components uses React's state hook `useState`) upon rendering the `<input />` element. When the user changes the text in the  `<input />` element, the `Set_Data_Inner()` method is being evoked, which on it's turn executes the `Set_Data` method and changes the state. When the state changes, React is being triggered to re-render (i.e. update) the component, setting the value attribute of the `<input />` element to its new value. If that was a bit much, let us slow-down the moment that the user presses the `i` key while entering a new name:
 
-![Pressing_The_I_Key](Media\Pressing_The_I_Key.png)
+![Pressing_The_I_Key](Media/Pressing_The_I_Key.png)
 
 ### A Component Affecting it's Parent
 
@@ -54,7 +54,7 @@ We have already seen examples where a parent component manipulates a child compo
 
 Suppose we have the following app:
 
-![Interacting components](Media\Interacting_Components.png)
+![Interacting components](Media/Interacting_Components.png)
 
 Both the `Color` and `Text` components influence their parent, `App`. Remember that components can have a state and means to manipulate that state. In this situation, `App` will have a state called `Color` and one called `Text`. Suppose that `App` is a functional component so it will also have the methods `Set_Color` and `Set_Text` defined. How can the child components `Color` and `Text` change the state of their parent? The answer is simple: `App` sends the state-updating methods down to it's children by way of props! Let us try this:
 
