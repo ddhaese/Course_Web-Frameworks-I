@@ -6,6 +6,7 @@
 - [What you should already know](WF_I_01_Fundamentals.md)
 - [React Basics](WF_I_02_React_Basics.md)
 - [React Advanced](WF_I_03_React_Advanced.md)
+- [CouchDB Basics](WF_I_04_CouchDB_Basics.md)
 
 ## Exercises
 
