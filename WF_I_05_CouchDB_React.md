@@ -40,7 +40,7 @@ This paradigm is used to crunch large datasets in a distributed system. Iti a tw
 ![MapReduce](Media/MapReduce.png)
 <small>[Bron](https://www.youtube.com/watch?v=lgWy7BwIKKQ)</small>
 
-In CouchDB this can be implmented using Javascript functions called View functions:
+In CouchDB this can be implemented using Javascript functions called View functions:
 
 ![View Functions](Media/View_Functions.png)
 
