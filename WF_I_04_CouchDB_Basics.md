@@ -1,4 +1,4 @@
-# Web Frameworks Deel I (26543/1700/1920/1/00)
+# Web Frameworks PArt I (26543/1700/1920/1/00)
 
 ## CouchDB Basics
 

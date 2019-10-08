@@ -1,4 +1,4 @@
-# WebFrameworks Deel I (26543/1700/1920/1/00)
+# WebFrameworks Part I (26543/1700/1920/1/00)
 
 ## React Basics
 
