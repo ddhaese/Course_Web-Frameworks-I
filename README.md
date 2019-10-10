@@ -13,7 +13,7 @@
 - [Ex 01: Colorize the React logo](Exercises/WF_I_Ex_01_Colorize.md)
 - [Ex 02: Locate a City](Exercises/WF_I_Ex_02_City_Locator.md)
 - [Ex 03: Simple clock](Exercises/WF_I_Ex_03_Clock.md)
-- [Ex 04: Fruit](EExercises/WF_I_Ex_04_Fruit.md)
+- [Ex 04: Fruit](Exercises/WF_I_Ex_04_Fruit.md)
 - [Ex 05: CSV Import](Exercises/WF_I_Ex_05_CSVImport.md)
 
 ## Solutions
