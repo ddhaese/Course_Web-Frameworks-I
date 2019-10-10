@@ -6,7 +6,7 @@
 
 As a second exercise, you will build yourself an application to locate a city in Belgium:
 
-![Mockup Screenshot of EX 02](Media/Ex_02_01.png)
+![Mockup Screenshot of EX 02](../Media/Ex_02_01.png)
 
 #### Given
 
