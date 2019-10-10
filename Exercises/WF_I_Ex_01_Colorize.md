@@ -25,17 +25,17 @@ Make sure you get acquainted with the above software, with priority for Visual S
 
 If all goes well, you should see something like this:
 
-![create-react-app built by npm init](Media/Getting_Started.png)
+![create-react-app built by npm init](../Media/Getting_Started.png)
 
 Now, install the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=nl) and read a bit about it. We will later discover its use. For now, look at the Components tab in your dev tools and you should see something like this:
 
-![React dev tools in action](Media/React_Dev_Tools.png)
+![React dev tools in action](../Media/React_Dev_Tools.png)
 
 ### Ex_01: Colorize the React Logo
 
 As a first exercise, we will make a mini application that resembles this mockup screenshot:
 
-![Mockup Screenshot of EX 01](Media/Ex_01_01.png)
+![Mockup Screenshot of EX 01](../Media/Ex_01_01.png)
 
 #### Given
 

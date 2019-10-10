@@ -6,7 +6,7 @@
 
 As a second exercise, you will build yourself an application to locate a city in Belgium:
 
-![Mockup Screenshot of EX 02](Media/Ex_02_01.png)
+![Mockup Screenshot of EX 02](../Media/Ex_02_01.png)
 
 #### Given
 
@@ -15,7 +15,7 @@ As a second exercise, you will build yourself an application to locate a city in
 
 #### Assignment
 
-Make an application that allows for selecting a Belgian town from a list. Upon selection of a town, the app shows it's location on an Open Street Map (OSM) component (thus __not__ Google Maps).
+Make an application that allows for selecting a Belgian town from a list. Upon selection of a town, the app shows its location on an Open Street Map (OSM) component (thus __not__ Google Maps).
 
 The app structure must be like this:
 
