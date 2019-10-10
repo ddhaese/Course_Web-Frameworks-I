@@ -19,4 +19,4 @@
 - Let the user save the database back into a csv file (same name + date as version)
 - Here is a mockup:
 
-![Mockup](Media/Mockup.png)
+![Mockup](Media/Ex_05_Mockup.png)
