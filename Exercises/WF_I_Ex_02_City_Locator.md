@@ -11,7 +11,7 @@ As a second exercise, you will build yourself an application to locate a city in
 #### Given
 
 - A CRA
-- This [Data](Data/Gemeenten_België.txt)
+- This [Data](../Data/Gemeenten_België.txt)
 
 #### Assignment
 
