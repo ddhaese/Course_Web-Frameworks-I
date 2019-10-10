@@ -66,7 +66,7 @@ Let us solve this first exercise step-by-step.
 
 When you follow the steps in the `Getting Started` section above, a ready-to-start webb-app will be created for you. Here is an overview of the files in your application upon generation:
 
-![Create React App - File overview](Media/Colorize_CRA.png)
+![Create React App - File overview](Media/Ex_01_Colorize_CRA.png)
 
 We will be working with the files indicated in <span style="color:red;">red</span>, but make sure you have a look at the other files too.
 
@@ -296,7 +296,7 @@ export function App() {
 
 We also changed the export type according to above specifications and start the application by executing `npm start` in the root of our application using the built-in console (let console appear using `ctrl + ù` on Windows systems). We see this in the browser:
 
-![Step 1, text removed](Media/Colorize_01.png)
+![Step 1, text removed](Media/Ex_01_Colorize_01.png)
 
 Notice that we forgot to change the application title. Change it to `Colorize` (you should know where to look!).
 
@@ -304,7 +304,7 @@ Notice that we forgot to change the application title. Change it to `Colorize` (
 
 In the file sidebar of VS Code, you make a new file and call in Logo.js:
 
-![New Component](Media/Colorize_02.png)
+![New Component](Media/Ex_01_Colorize_02.png)
 
 As discussed, we will be working mostly with functional components, so that is what we will do here. You start by adding a reference to `react` so that we can use JSX freely:
 
@@ -397,11 +397,11 @@ export function App() {
 
 For now, we have given it a fixed color (red). Notice the syntax of the import. The result looks like this:
 
-![Adding Logo component](Media/Colorize_03.png)
+![Adding Logo component](Media/Ex_01_Colorize_03.png)
 
 The larger logo is clearly the new one. The problem is, is is too large and does rotate. Why is that? Well the only thing it could be is the className that is present on the `img` tag but not on our component. So, we can try to add it to the `svg` tag inside our component (*not on the `Logo` tag as it would become a prop instead of an attribute and only have effect if it is being 'consumed' by the Logo component*). Adding ` className="App-logo"` indeed fixes this issue. We can now safely remove the `img` tag from the `App` component as well as the import `import logo from "./logo.svg";` and the svg file itself:
 
-![Adding Logo component](Media/Colorize_03.png)
+![Adding Logo component](Media/Ex_01_Colorize_04.png)
 
 ##### The Color Picker
 
@@ -476,4 +476,4 @@ Instead of fixing the color, we want to be able to have the color being set by a
 	}
 	```
 
-![Final result](Media/Colorize_05.png)
+![Final result](Media/Ex_01_Colorize_05.png)
