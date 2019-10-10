@@ -12,7 +12,7 @@
 
 Build a clock like this one:
 
-![Clock only updates span](../Media/Clock_Update.png)
+![Clock only updates span](Media/Ex_03_Clock_Update.png)
 
 - The clock must display the actual time of day
 - Make use of a CRA (unlike in the image above)
