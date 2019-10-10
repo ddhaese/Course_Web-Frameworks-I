@@ -11,11 +11,11 @@ As a second exercise, you will build yourself an application to locate a city in
 #### Given
 
 - A CRA
-- This [Data](Data\Gemeenten_België.txt)
+- This [Data](/Data/Gemeenten_België.txt)
 
 #### Assignment
 
-Make an application that allows for selecting a Belgian town from a list. Upon selection of a town, the app shows it's location on an Open Street Map (OSM) component (thus __not__ Google Maps).
+Make an application that allows for selecting a Belgian town from a list. Upon selection of a town, the app shows its location on an Open Street Map (OSM) component (thus __not__ Google Maps).
 
 The app structure must be like this:
 
