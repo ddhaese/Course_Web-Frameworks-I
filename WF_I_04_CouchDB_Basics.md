@@ -8,7 +8,7 @@
 
 NoSQL database systems are called this way because the goal originally was to create databases where SQL is no longer needed. Especially driven by the difficulty for companies to hire DB admins (scarce and expensive) there was a search for alternatives that could also handle big data.
 
-![Google trends NoSQL versus Relational DB](Media/Trands.png)
+![Google trends NoSQL versus Relational DB](Media/Trends.png)
 
 In comparison with relational databases management systems (RDBMS), NoSQL database systems are **more scalable**, **more modular** and **simpler** to use. Instead of tables linked by way of foreign keys, a NoSQL database system consists of so-called documents each of which contains all the information to represent a real-world entity. Hence, a NoSQL database system is also called a **Document Store**. Let us visualize the difference between relational and NoSQL DBSs:
 
