@@ -7,6 +7,8 @@
 - [React Basics](WF_I_02_React_Basics.md)
 - [React Advanced](WF_I_03_React_Advanced.md)
 - [CouchDB Basics](WF_I_04_CouchDB_Basics.md)
+- [CouchDB Advanced](WF_I_05_CouchDB_React.md)
+- [Angular Intro](WF_I_06_Angular.md)
 
 ## Exercises
 
@@ -15,6 +17,7 @@
 - [Ex 03: Simple clock](Exercises/WF_I_Ex_03_Clock.md)
 - [Ex 04: Fruit](Exercises/WF_I_Ex_04_Fruit.md)
 - [Ex 05: CSV Import](Exercises/WF_I_Ex_05_CSVImport.md)
+- [Ex 06: Marvel](Solutions/WF_I_Ex_06_Marvel.md)
 
 ## Solutions
 
