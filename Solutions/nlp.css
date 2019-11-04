@@ -1,0 +1,35 @@
+body {
+	margin: 30px;
+}
+
+form {
+	display: flex;
+	align-items: center;
+}
+
+input {
+	margin: 20px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#par-viewer {
+	border: solid 1px #646464;
+}
+
+#summary {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.par {
+	width: 30px;
+	margin: 4px;
+	border: solid 1px red;
+}
+
+.success {
+	border: solid 3px green;
+}
