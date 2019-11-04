@@ -31,9 +31,9 @@ Instead of *completed* we use the term **settled**.
 Unlike other (some would argue *real*) programming languages, JavaScript is designed to be single threaded, not multi-threaded. This means that JavaScript cannot programmatically manage multiple threads running scripts independently and simultaneously. How is this even possible? How can we have promises in a single-threaded scripting language? And more, how can we have events?
 
 > Differences between promises and events:
-> 
+>
 > While an event can fire multiple time, a promise can only settle once
-> 
+>
 > A `resolve` or `reject` callback that has been added to a promise after it has already settled will still appropriately be executed
 
 ### Initializing a Promise

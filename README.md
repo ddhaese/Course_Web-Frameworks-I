@@ -9,6 +9,7 @@
 - [CouchDB Basics](WF_I_04_CouchDB_Basics.md)
 - [CouchDB Advanced](WF_I_05_CouchDB_React.md)
 - [Angular Intro](WF_I_06_Angular.md)
+- [Promises Intro](WF_I_07_Promises.md)
 
 ## Exercises
 
@@ -17,7 +18,8 @@
 - [Ex 03: Simple clock](Exercises/WF_I_Ex_03_Clock.md)
 - [Ex 04: Fruit](Exercises/WF_I_Ex_04_Fruit.md)
 - [Ex 05: CSV Import](Exercises/WF_I_Ex_05_CSVImport.md)
-- [Ex 06: Marvel](Solutions/WF_I_Ex_06_Marvel.md)
+- [Ex 06: Marvel](Exercises/WF_I_Ex_06_Marvel.md)
+- [Ex 07: NLP using Promises](Exercises/WF_I_Ex_07_NLP.md)
 
 ## Solutions
 
@@ -25,3 +27,5 @@
 - [ColorText](Solutions/ColorText.zip)
 - [Context](Solutions/Context.zip)
 - [City Locator](Solutions/CityLocator.zip)
+- [NLP using Promises](Solutions/NLP)
+- [Worker threads](Solutions/NLP)
