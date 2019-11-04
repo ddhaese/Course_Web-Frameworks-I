@@ -137,7 +137,6 @@ The combination of an event binding and a property binding leads to a two-way bi
 	<input [(name)]="">{{ displayTypeOfComponent }}</input>
 </form>
 
-
 ### Template Reference Variables
 
 While in the above examples the context was being provided by the host component, you can also refer to other elements in the template:
@@ -151,4 +150,3 @@ While in the above examples the context was being provided by the host component
 	<li *ngIf="item.show" [class]="item.type" (click)="showDetails(displayType)">{{ item.name }}</li>
 </ul>
 ```
-

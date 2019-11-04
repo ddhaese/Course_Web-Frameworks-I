@@ -1,6 +1,6 @@
 # Web Frameworks Deel I (26543/1700/1920/1/00)
 
-## Promises Basics
+## Promises and Workers
 
 ### The NLP Case Study
 
@@ -28,13 +28,29 @@ Instead of *completed* we use the term **settled**.
 
 ### Pretend Multi-threaded
 
-Unlike other (some would argue *real*) programming languages, JavaScript is designed to be single threaded, not multi-threaded. This means that JavaScript cannot programmatically manage multiple threads running scripts independently and simultaneously. How is this even possible? How can we have promises in a single-threaded scripting language? And more, how can we have events?
+Unlike other (some would argue *real*) programming languages, the main JavaScript thread of a web application is designed to be single threaded, not multi-threaded. This means that JavaScript
+
+- only has one call stack and one memory heap
+- cannot programmatically manage multiple threads running scripts independently and simultaneously
+- must finish a piece of code before moving on to the next
+
+One well-known and simple example of the single-threaded nature of JavaScript is the `Hello World` alert:
+
+```js
+alert("Hello world!")
+```
+
+which blocks the execution of the main thread until the user hits the `OK` button.
+
+How is it even possible to work with events if JavaScript is truly single-threaded? And to return to the current topic, how can we have promises in a single-threaded scripting language? Well, whenever the JavaScript engine (including SpiderMonkey, JavaScriptCore and V8) encounters code that needs to be treated asynchronously such as an *DOM event* (`onClick`, `onbeforeinstallprompt`, &hellip;), a `setTimeout`, an *ajax* call or the like, it does not immediately runs the code, but instead pushes it off to the corresponding Web API of the browser. Whenever the Web API decides that the callback needs to be executed (i.e. upon firing the event, after n milliseconds or upon return from the ajax call) it pushes the callback onto the message queue where it is being handled by the event loop. The event loop watches the stack and the message queue and pushes the next task onto the stack once the stack gets empty. See [this video](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D) and play around with the Loupe	application written by Philip Roberts.
 
 > Differences between promises and events:
 >
 > While an event can fire multiple time, a promise can only settle once
 >
 > A `resolve` or `reject` callback that has been added to a promise after it has already settled will still appropriately be executed
+
+So with the JavaScript engine being single threaded, there won't be any parallel computing possible, right? Well, with the invent of web workers, this is no longer true, but more on that topic later.
 
 ### Initializing a Promise
 
@@ -237,3 +253,118 @@ const getSupplyChainByEmail = async email => {
 ```
 
 Notice that the code is a more elegant, but it requires the use of a wrapper function that itself is being turned into a promise by way of the `async` keyword.
+
+### Web workers
+
+As promised, I would like to add a few words on Web workers. With Moore's law dying, multi-core architecture taking over the world, web application taking on more responsibilities and JavaScript becoming increasingly popular everywhere (backend, frontend, IoT devices, &hellip;) there was a need to allow for parallel computing inside and outside the browser.
+
+Let us consider the following case:
+
+```js
+for (let i = 0; i++; i< 100000>){
+	// do stuff
+}
+```
+
+The goal of parallelisation would be to divide the above workload into smaller chunks that run on parallel processors. Remember that approaching this with the `setTimeout (..., 0)` trick would still have the code run with the same thread, albeit allowing the browser to perform some rendering in between the chunks:
+
+```js
+for (let i = 0; i++; i< 100>){
+	setTimeout (() => {
+		for (let i = 0; i++; i< 1000>){
+			// do stuff
+		}
+	}, 0);
+}
+```
+
+So, we need something better and thanks to the HTML5 specification of the Web Worker API we can now achieve true parallelism, i.e. utilize multiple cores. Be warned though:
+
+- Web workers are meant for heavy-weight lifting only
+- They are slow to start up and require a lot of cpu overhead
+- Web workers require a lot of memory
+- Web workers are isolated and have a separate memory, message queue and event loop
+- They cannot access the DOM and the common JS functions and thus cannot interfere with the user interface directly (ajax calls are possible!)
+- They must be controlled through messages much like the messages conveying the callbacks in the message queue described above
+
+![Inner working of the web workers](http://madhugnadig.com/articles/images/web-workers.png)
+
+### Creating a new Web Worker
+
+Here is the main JavaScript cipher
+
+```js - main.js
+function compute(){
+	if (!Worker) throw "Cannot do serious work in this crappy browser! Goodbye.";
+
+	let worker = new Worker("task.js");
+
+	worker.postMessage(input);
+
+	worker.onmessage = event => {
+		console.log(event.data);
+	};
+}
+```
+
+And here is how the worker looks like:
+
+```js - task.js
+isolatedTask = input => {
+  const result =  heavyLiftingHere();
+  // The way to return to the main thread of the JavaScript Engine:
+  postMessage(result);
+}
+```
+
+### Completing the story: Parallel web workers
+
+All we are left to do is to create multiple web workers to achieve parallelism. Refactoring the previous generic code (not tested):
+
+```js - task.js
+isolatedTask = (index, input) => {
+	let resultChunk = [];
+
+	for (let i = 0; i++; i< 1000>){
+		resultChunk [i] = doHeavyStuff();
+	}
+
+	postMessage({result: resultChunk, index});
+}
+```
+
+```js
+function compute(){
+	if (!Worker) throw "Cannot do serious work in this crappy browser! Goodbye.";
+
+	let results = [];
+		
+	for (let i = 0; i++; i< 100>){
+		let worker = new Worker("task.js");
+
+		worker.postMessage(i, "dummyInput");
+
+		worker.onmessage = event => {
+			results[event.data.index] = event.data.result;
+		};
+	}
+
+	return results;
+}
+```
+
+Here is an example of the speedup achieved by using web workers:
+
+| Number of Data points | Serial    | Parallel | Speedup |
+| --------------------- | --------- | -------- | ------- |
+| 400                   | 9.165000  | 1.855000 | 4.9407  |
+| 800                   | 11.10500  | 1.225000 | 9.0653  |
+| 1600                  | 20.099999 | 3.545000 | 5.6699  |
+| 3200                  | 45.905000 | 4.929999 | 9.3113  |
+| 6400                  | 93.797550 | 5.265000 | 17.8153 |
+| 12800                 | 288.005   | 9.44499  | 30.4298 |
+[Source](http://madhugnadig.com/articles/parallel-processing/2017/03/29/the-guide-to-parallel-programming-in-javascript.html)
+
+Be careful to monitor memory usage, though!
+
+Happy coding!

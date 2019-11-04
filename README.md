@@ -9,7 +9,7 @@
 - [CouchDB Basics](WF_I_04_CouchDB_Basics.md)
 - [CouchDB Advanced](WF_I_05_CouchDB_React.md)
 - [Angular Intro](WF_I_06_Angular.md)
-- [Promises Intro](WF_I_07_Promises.md)
+- [Promises and Web workers](WF_I_07_Promises_and_Workers.md)
 
 ## Exercises
 
