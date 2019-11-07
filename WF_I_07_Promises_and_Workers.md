@@ -339,7 +339,7 @@ function compute(){
 
 	let results = [];
 		
-	for (let i = 0; i++; i< 100>){
+	for (let i = 0; i<100; i++){
 		let worker = new Worker("task.js");
 
 		worker.postMessage(i, "dummyInput");
