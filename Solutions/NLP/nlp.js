@@ -19,7 +19,7 @@ const processParagraph = (paragraph, index) => {
 		url.searchParams.set("text", paragraph);
 		url.searchParams.set("lang", "en");
 		url.searchParams.set("include", "types,categories");
-		url.searchParams.set("token", "13126d6b7421473aa457b793f986505a");
+		url.searchParams.set("token", "<yourtokenhere>");
 
 		xhr.open("GET", url);
 		xhr.onload = () => resolve({ index, resp: xhr.responseText });
