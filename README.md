@@ -29,4 +29,4 @@
 - [City Locator](Solutions/CityLocator.zip)
 - [NLP using Promises](Solutions/NLP)
 - [Worker threads](Solutions/NLP)
-- [CSV Import](Solutions/CSVImport)
+- [CSV Import](Solutions/CSV_Import)
