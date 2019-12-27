@@ -271,7 +271,7 @@ The goal of parallelisation would be to divide the above workload into smaller c
 ```js
 for (let i = 0;  i< 100; i++){
 	setTimeout (() => {
-		for (let i = 0;  i< 1000; i++){
+		for (let j = 0;  j< 1000; j++){
 			// do stuff
 		}
 	}, 0);
