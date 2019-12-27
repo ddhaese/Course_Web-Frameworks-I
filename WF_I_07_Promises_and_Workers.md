@@ -138,7 +138,7 @@ const test = (input) => {
 diffTime = performance.now() - startTime;
 console.log (`Start Execution: ${diffTime} ms`);
 
-test ( 0 );
+test(0);
 
 diffTime = performance.now() - startTime;
 console.log (`End script: ${diffTime} ms`);
@@ -221,7 +221,7 @@ const test = (input) => {
 diffTime = performance.now() - startTime;
 console.log (`Start Execution: ${diffTime} ms`);
 
-test ( 0 ).then(input =>{
+test(0).then(input =>{
 	diffTime = performance.now() - startTime;
 	console.log (`Returning input ${input}: ${diffTime} ms`);
 });
@@ -261,7 +261,7 @@ As promised, I would like to add a few words on Web workers. With Moore's law dy
 Let us consider the following case:
 
 ```js
-for (let i = 0; i++; i< 100000>){
+for (let i = 0;  i< 100000; i++){
 	// do stuff
 }
 ```
@@ -269,9 +269,9 @@ for (let i = 0; i++; i< 100000>){
 The goal of parallelisation would be to divide the above workload into smaller chunks that run on parallel processors. Remember that approaching this with the `setTimeout (..., 0)` trick would still have the code run with the same thread, albeit allowing the browser to perform some rendering in between the chunks:
 
 ```js
-for (let i = 0; i++; i< 100>){
+for (let i = 0;  i< 100; i++){
 	setTimeout (() => {
-		for (let i = 0; i++; i< 1000>){
+		for (let j = 0;  j< 1000; j++){
 			// do stuff
 		}
 	}, 0);
@@ -325,7 +325,7 @@ All we are left to do is to create multiple web workers to achieve parallelism. 
 isolatedTask = (index, input) => {
 	let resultChunk = [];
 
-	for (let i = 0; i++; i< 1000>){
+	for (let i = 0;  i< 1000; i++){
 		resultChunk [i] = doHeavyStuff();
 	}
 

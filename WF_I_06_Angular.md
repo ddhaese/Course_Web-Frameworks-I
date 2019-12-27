@@ -133,9 +133,11 @@ In the above example `item.type` (template expression) is not allowed to have si
 
 The combination of an event binding and a property binding leads to a two-way binding:
 
+```html
 <form>
 	<input [(name)]="">{{ displayTypeOfComponent }}</input>
 </form>
+```
 
 ### Template Reference Variables
 
