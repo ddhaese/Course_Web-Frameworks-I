@@ -26,7 +26,7 @@ There are several NoSQL database systems of which the most popular are shown her
 
 ![Top NoSQL Database Systems](Media/NoSQL_Top.png)
 
-So although not the most popular, CouchDB has many advantages that make it a good choice when learning the principle of NoSQL.
+So even though CouchDB isn't the most popular, it has many advantages that makes it a good choice when learning the principle of NoSQL.
 
 ### Scalability
 
@@ -50,8 +50,6 @@ In a RDBMS, you let the users wait (lock) during an update operation until all a
 
 ### Revisions
 
-The clue to make this all work is the use of a intelligent versioning system. It is simple and comparable to github with one exception:
+The clue to make this all work is the use of an intelligent versioning system. It is simple and comparable to github with one exception:
 
 > CouchDB does not guarantee that all versions will remain available forever!
-
-![Versions](Media/Versioning.png)
