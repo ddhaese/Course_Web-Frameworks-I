@@ -16,7 +16,7 @@ In comparison with relational databases management systems (RDBMS), NoSQL databa
 
 Notice that the concept of tables is complete abandonned. For a simple invoice with two products, you need 5 fields across 3 tables in a RDBMS. The same information is capture together as one document in the NosSQL system. Notice also the weird terminology of an *invoice database*. Indeed documents linked a to same entity are called a database (mind that this is the term used typically for CouchDB, other NoSQL system speak of collections).
 
-Furthermore, mind that in the NoSQL system there is the possibility to have arrays, an array of objects, nested arrays, etc &hellip; Also very different is the fact that in the NoSQL system their is absolutely **no type definition**! There is not even a validation the the fields are all present inside a document. You might indeed have an invoice where the data field is missing, that is not just the value but the entire field, something that would never be possible in a RDBMS. In short, we can say that **the NoSQL system has no schema**! To top it off, there are no transactions anymore! The only difficulty of NoSQL systems is coming to terms with the above. In its use NoSQL is definitely simpler, it is just a matter to getting used to it.
+Furthermore, mind that in the NoSQL system there is the possibility to have arrays, an array of objects, nested arrays, etc &hellip; Also very different is the fact that in the NoSQL system there is absolutely **no type definition**! There is not even a validation whether the fields are all present inside a document. You might indeed have an invoice where the data field is missing, that is not just the value but the entire field, something that would never be possible in a RDBMS. In short, we can say that **the NoSQL system has no schema**! To top it off, there are no transactions anymore! The only difficulty of NoSQL systems is coming to terms with the above. In its use NoSQL is definitely simpler, it is just a matter to getting used to it.
 
 Here is a [very educational video](https://youtu.be/b2F-DItXtZs) on the topic of NoSQL versus RDBMS.
 
@@ -26,7 +26,7 @@ There are several NoSQL database systems of which the most popular are shown her
 
 ![Top NoSQL Database Systems](Media/NoSQL_Top.png)
 
-So although not the most popular, CouchDB has many advantages that make it a good choice when learning the principle of NoSQL.
+So even though CouchDB isn't the most popular, it has many advantages that makes it a good choice when learning the principle of NoSQL.
 
 ### Scalability
 
@@ -50,8 +50,6 @@ In a RDBMS, you let the users wait (lock) during an update operation until all a
 
 ### Revisions
 
-The clue to make this all work is the use of a intelligent versioning system. It is simple and comparable to github with one exception:
+The clue to make this all work is the use of an intelligent versioning system. It is simple and comparable to github with one exception:
 
 > CouchDB does not guarantee that all versions will remain available forever!
-
-![Versions](Media/Versioning.png)
