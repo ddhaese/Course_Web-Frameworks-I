@@ -35,7 +35,7 @@ Views in CouchDB uses the Map-Reduce paradigm.
 
 ### The Map-Reduce Paradigm
 
-This paradigm is used to crunch large datasets in a distributed system. Iti a two-phase process. The first phase is the Map phase. It converts documents to a set of key-value pairs. In Map-reduce parlance, we say it 'emits' key value pairs. It the second phase the key-value pairs are aggregate (grouped) by their keys.
+This paradigm is used to crunch large datasets in a distributed system. It's a two-phase process. The first phase is the Map phase. It converts documents to a set of key-value pairs. In Map-reduce parlance, we say it 'emits' key value pairs. It the second phase the key-value pairs are aggregated (grouped) by their keys.
 
 ![MapReduce](Media/MapReduce.png)
 <small>[Bron](https://www.youtube.com/watch?v=lgWy7BwIKKQ)</small>
